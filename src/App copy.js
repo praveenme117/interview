@@ -2,11 +2,15 @@ import { useContext } from "react";
 import CartProvider from "./Provider";
 import Product from "./Product";
 import Cart from "./Cart";
-import SearchBar from "./SearchBar";
-import { SearchBox } from "./SearchBox";
 
 const App = () => {
-  return <SearchBox />;
+  return (
+    <CartProvider>
+      <h2>Shopping cart</h2>
+      <Product />
+      <Cart />
+    </CartProvider>
+  );
 };
 
 export default App;
